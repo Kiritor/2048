@@ -1,7 +1,6 @@
 /**
  * @Description:style.css
  * @Author:LCore
- * @update:修改头部样式
 */
 
 .header {
@@ -10,9 +9,9 @@
     text-align: left;
     width: 500px;
     height: 80px;
+	
 }
 .header .cell {
-    width: 20%;
     float: left;
     text-align: right;
 	font-family: '微软雅黑';

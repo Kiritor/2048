@@ -15,9 +15,32 @@ var direction = {
 };
 
 $(function() {
+	prepareForMobile();//为移动端
     newGame();
 });
 
+function prepareForMobile(){
+	if(documentWidth>500){
+		//web端
+		gridContainerWidth =500;
+		cellSpace=20;
+		cellSideLength=100;
+		headerWidth = 500;
+	}
+    $('#grid-container').css('width',gridContainerWidth - 2*cellSpace);
+	$('#grid-container').css('height',gridContainerWidth - 2*cellSpace);
+	$('#grid-container').css('padding',cellSpace);
+	$('#grid-container').css('border-radius',0.02*gridContainerWidth);
+	$('.grid-cell').css('width',cellSideLength);
+	$('.grid-cell').css('height',cellSideLength);
+	$('.grid-cell').css('border-radius',0.02*cellSideLength);
+	//设置头部
+	alert(headerWidth);
+	headerWidth = headerWidth*0.92;
+	$('.header').css('width',headerWidth);
+	$('#newGame').css('width',headerWidth*0.20+'px');
+	$('#topScore').css('width',headerWidth*0.40*0.90+'px');
+}
 function newGame() {
     //初始化棋盘格
     init();
@@ -64,13 +87,13 @@ function updateBoardView() {
                 numberCell.css({
                     "width": "0px",
                     "height": "0px",
-                    "top": getPostionTop(i, j) + 50,
-                    "left": getPostionLeft(i, j) + 50
+                    "top": getPostionTop(i, j) + cellSideLength/2,
+                    "left": getPostionLeft(i, j) + cellSideLength/2
                 });
             } else {
                 numberCell.css({
-                    "width": "100px",
-                    "height": "100px",
+                    "width": cellSideLength,
+                    "height": cellSideLength,
                     "top": getPostionTop(i, j),
                     "left": getPostionLeft(i, j)
                 });
@@ -85,7 +108,8 @@ function updateBoardView() {
 
         }
     }
-
+   $('.number-cell').css('line-height',cellSideLength+'px');
+   $('.number-cell').css('font-size',0.6*cellSideLength+'px');
 }
 
 

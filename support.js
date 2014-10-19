@@ -3,13 +3,19 @@
  * @Author:LCore
  */
 
+
+var documentWidth = window.screen.availWidth;
+var gridContainerWidth = 0.92*documentWidth;
+var cellSideLength = 0.18*documentWidth;
+var cellSpace = 0.04*documentWidth;
+var headerWidth=window.screen.availWidth;
 function getPostionTop(i, j) {
 
-    return (i * 100 + (i + 1) * 20);
+    return (i * cellSideLength + (i + 1) * cellSpace);
 }
 
 function getPostionLeft(i, j) {
-    return (j * 100 + (j + 1) * 20);
+    return (j * cellSideLength + (j + 1) * cellSpace);
 }
 
 function getBackgroundColorByNum(number) {

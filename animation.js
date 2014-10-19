@@ -11,8 +11,8 @@ function showNumberWithAnimation(randx, randy, randNum) {
     });
     numberCell.text(randNum);
     numberCell.animate({
-        width: "100px",
-        height: "100px",
+        width: cellSideLength,
+        height: cellSideLength,
         top: getPostionTop(randx, randy),
         left: getPostionLeft(randx, randy)
     }, 100);
