@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2048游戏制作</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="animation.js" type="text/javascript"></script>
+    <script src="support.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="cell"> <a href="javascript:;" onclick="newGame();" id="newGame">重玩</a>
+        </div>
+        <div class="cell" style="width:40%;">
+            <div id="topScore">最高分数</br>1300</div>
+        </div>
+        <div class="cell" style="width:40%;">
+            <div id="currentScore">当前得分</br><span id="score">0</span></div>
+        </div>
+    </div>
+    <div id="grid-container">
+        <div class="grid-cell" id="grid-cell-00"></div>
+        <div class="grid-cell" id="grid-cell-01"></div>
+        <div class="grid-cell" id="grid-cell-02"></div>
+        <div class="grid-cell" id="grid-cell-03"></div>
+        <div class="grid-cell" id="grid-cell-10"></div>
+        <div class="grid-cell" id="grid-cell-11"></div>
+        <div class="grid-cell" id="grid-cell-12"></div>
+        <div class="grid-cell" id="grid-cell-13"></div>
+        <div class="grid-cell" id="grid-cell-20"></div>
+        <div class="grid-cell" id="grid-cell-21"></div>
+        <div class="grid-cell" id="grid-cell-22"></div>
+        <div class="grid-cell" id="grid-cell-23"></div>
+        <div class="grid-cell" id="grid-cell-30"></div>
+        <div class="grid-cell" id="grid-cell-31"></div>
+        <div class="grid-cell" id="grid-cell-32"></div>
+        <div class="grid-cell" id="grid-cell-33"></div>
+    </div>
+</body>
+
+</html>
